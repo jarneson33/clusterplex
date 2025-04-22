@@ -47,6 +47,9 @@ var jobPoster = require("./jobPoster");
 
 let child = null;
 
+console.log("process.cwd: " + process.cwd());
+console.log("process.argv: " + process.argv);
+
 if (TRANSCODE_OPERATING_MODE == "local") {
 	transcodeLocally(process.cwd(), process.argv.slice(2), process.env);
 } else if (
